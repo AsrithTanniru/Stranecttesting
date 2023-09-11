@@ -78,6 +78,12 @@ def LogIn():
 def SignUp():
     username = request.args.get("nila")
     password = request.args.get("lila")
+    error = "Please Re-type the password."
+    if username == None:
+        username = ""
+        password = ""
+        error = ""
+
     if request.method == "POST":
         username = request.form["Username"]
         password = request.form["Password"]
@@ -118,7 +124,7 @@ def SignUp():
             )
     art_info = getArt()
 
-    return render_template("SignUp.html", username=username, password=password, error="Please Re-type the password.")
+    return render_template("SignUp.html", username=username, password=password, error=error)
 
 
 # Your route to handle the selected interests

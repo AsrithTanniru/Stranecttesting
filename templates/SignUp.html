@@ -443,6 +443,7 @@
 
 <script>
     // Function to check username availability and update the "Create Account" button state
+    var un = $("#username").val();
     function checkUsernameAvailability() {
         // Get the username input value
         var username = $("#username").val();
@@ -556,7 +557,11 @@
 
     // Attach the checkUsernameAvailability function to the username input's change event
     $("#username").on("input", checkUsernameAvailability);
-    checkUsernameAvailability()
+    if (un != "") {
+
+        checkUsernameAvailability()
+    }
+    
     
 
     function redirectToSignIn() {
