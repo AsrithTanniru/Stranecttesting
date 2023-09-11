@@ -1,0 +1,651 @@
+{% extends './base/HomeBase.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="icon-holder" id="icon-holder">
+        <div class="ih" id="ih">
+            <div class="btns-div">
+                <!-- <p class="title">trilinko</p> -->
+                <!-- <input type="text" name="search" id="" placeholder="&#x1F50E;&#xFE0E; Search here.." class="search"> -->
+                <!-- <button id="toggleButton" class="toggle-button" style="background-color: transparent; outline: none; border: none;">
+                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_13_2)">
+                    <path d="M48.2679 12C49.0377 10.6667 50.9623 10.6667 51.7321 12L91.5692 81C92.339 82.3333 91.3768 84 89.8372 84H10.1628C8.62323 84 7.66098 82.3333 8.43078 81L48.2679 12Z" fill="white"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_13_2">
+                    <rect width="100" height="100" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    
+            </button> -->
+
+                <!-- <div class="gen">
+                    <p>General</p>
+                </div> -->
+                <div class="buttons">
+                    <button id="toggleButton" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="15" viewBox="0 -960 960 960" width="15">
+                            <path fill="#252B48"
+                                d="M411-481 213-679l42-42 240 240-240 240-42-42 198-198Zm253 0L466-679l42-42 240 240-240 240-42-42 198-198Z" />
+                        </svg>
+                    </button>
+                    <button class="rbtns" id="Home" type="button"><svg xmlns="http://www.w3.org/2000/svg" height="38"
+                            viewBox="0 -960 960 960" width="38">
+                            <path fill="white"
+                                d="M160-120v-401l-84 64-36-48 440-335 440 336-36 47-84-64v401H160Zm60-60h520v-387L480-765 220-567v387Zm0 0h520-520Zm100-180q-17 0-28.5-11.5T280-400q0-17 11.5-28.5T320-440q17 0 28.5 11.5T360-400q0 17-11.5 28.5T320-360Zm160 0q-17 0-28.5-11.5T440-400q0-17 11.5-28.5T480-440q17 0 28.5 11.5T520-400q0 17-11.5 28.5T480-360Zm160 0q-17 0-28.5-11.5T600-400q0-17 11.5-28.5T640-440q17 0 28.5 11.5T680-400q0 17-11.5 28.5T640-360Z" />
+                            <ellipse style="paint-order: fill; stroke: rgba(0, 0, 0, 0); fill: #EA1179;" cx="757.068"
+                                cy="-400" rx="150" ry="150" />
+                        </svg> <span class="ldbwebfhwebf">Home</span></button>
+                    <button class="rbtns" id="Connections" type="button"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="38" viewBox="0 -960 960 960" width="38">
+                            <path fill="white"
+                                d="M0-240v-53q0-38.567 41.5-62.784Q83-380 150.376-380q12.165 0 23.395.5Q185-379 196-377.348q-8 17.348-12 35.165T180-305v65H0Zm240 0v-65q0-32 17.5-58.5T307-410q32-20 76.5-30t96.5-10q53 0 97.5 10t76.5 30q32 20 49 46.5t17 58.5v65H240Zm540 0v-65q0-19.861-3.5-37.431Q773-360 765-377.273q11-1.727 22.171-2.227 11.172-.5 22.829-.5 67.5 0 108.75 23.768T960-293v53H780Zm-480-60h360v-6q0-37-50.5-60.5T480-390q-79 0-129.5 23.5T300-305v5ZM149.567-410Q121-410 100.5-430.562 80-451.125 80-480q0-29 20.562-49.5Q121.125-550 150-550q29 0 49.5 20.5t20.5 49.933Q220-451 199.5-430.5T149.567-410Zm660 0Q781-410 760.5-430.562 740-451.125 740-480q0-29 20.562-49.5Q781.125-550 810-550q29 0 49.5 20.5t20.5 49.933Q880-451 859.5-430.5T809.567-410ZM480-480q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm.351-60Q506-540 523-557.351t17-43Q540-626 522.851-643t-42.5-17Q455-660 437.5-642.851t-17.5 42.5Q420-575 437.351-557.5t43 17.5ZM480-300Zm0-300Z" />
+                            <ellipse style="paint-order: fill; stroke: rgba(0, 0, 0, 0); fill: transparent;"
+                                cx="757.068" cy="-400" rx="150" ry="150" />
+                        </svg> <span class="ldbwebfhwebf">Connections</span></button>
+                    <button class="rbtns" id="Messages" type="button">
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <svg height="38" viewBox="0 -960 960 960" width="38" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M186.666-120q-27 0-46.833-19.833T120-186.666v-586.668q0-27 19.833-46.833T186.666-840h586.668q27 0 46.833 19.833T840-773.334v586.668q0 27-19.833 46.833T773.334-120H186.666Zm0-66.666h586.668v-130.667H636Q608.667-278 567.167-256.667q-41.5 21.334-87.167 21.334t-87.167-21.334Q351.333-278 324-317.333H186.666v130.667Zm293.498-115.333q39.836 0 72.169-23Q584.667-348 604-384h169.334v-389.334H186.666V-384H356q19.333 36 51.831 59.001 32.497 23 72.333 23ZM186.666-186.666H773.334 186.666Z"
+                                style="fill: rgb(255, 255, 255);" />
+                            <ellipse style="paint-order: fill; stroke: rgba(0, 0, 0, 0); fill: #EA1179;" cx="757.068"
+                                cy="-400" rx="150" ry="150" />
+                        </svg>
+                        <span class="ldbwebfhwebf">Messages</span>
+                    </button>
+                    <button class="rbtns" id="Dunks" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="38" viewBox="0 -960 960 960" width="38">
+                            <path fill="white"
+                                d="m392-313 260-169-260-169v338ZM140-160q-24 0-42-18t-18-42v-520q0-24 18-42t42-18h680q24 0 42 18t18 42v520q0 24-18 42t-42 18H140Zm0-60h680v-520H140v520Zm0 0v-520 520Z" />
+                        </svg>
+                        <span class="ldbwebfhwebf">Dunks</span>
+                    </button>
+                    <button class="rbtns" id="Hub" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="38" viewBox="0 -960 960 960" width="38">
+                            <path fill="white"
+                                d="M560-32v-60q125 0 212.5-87.321Q860-266.643 860-392h60q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T560-32Zm0-120v-60q69 0 124.5-55.5T740-392h60q0 95-72.5 167.5T560-152ZM222-49q-11.667 0-23.333-4.5Q187-58 179-66L9-236q-8-8-12.5-19.557Q-8-267.115-8-278.672-8-291-3.565-301.875T9-321l151-151q17-17 42.5-17t42.5 17l64 64 37-37-64-64q-17-17.315-17-42.157Q265-576 282-593l75-75q17.378-17 42.689-17T442-668l64 64 37-37-64-64q-17-17.378-17-42.689T479-790l151-151q8.857-9 19.929-13.5Q661-959 673-959q12 0 23 4t20 13l170 170q8.87 8.521 12.935 19.754Q903-741.014 903-728.62q0 11.62-5 23.12-5 11.5-13 19.5L734-535q-23 23-42.5 23T649-535l-64-64-37 37 64 64q17 17.378 16.5 42.689T611-413l-74 74q-17.378 17-42.689 17T452-339l-64-64-37 37 64 64q17 17 17 42.5T415-217L264-66q-8.25 8.13-19.125 12.565Q234-49 222-49Zm0-59 54-54-170-170-54 54 170 170Zm97-97 54-54-170-170-54 54 170 170Zm176-176 74-74-170-170-74 74 170 170Zm197-197 54-54-170-170-54 54 170 170Zm97-97 54-54-170-170-54 54 170 170ZM447-503Z" />
+                            <ellipse style="paint-order: fill; stroke: rgba(0, 0, 0, 0); fill: #EA1179;" cx="757.068"
+                                cy="-400" rx="150" ry="150" />
+                        </svg>
+                        <span class="ldbwebfhwebf">Hub</span>
+                    </button>
+                    <button class="rbtns" id="settings" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="38" viewBox="0 -960 960 960" width="38">
+                            <path fill="white"
+                                d="m388-80-20-126q-19-7-40-19t-37-25l-118 54-93-164 108-79q-2-9-2.5-20.5T185-480q0-9 .5-20.5T188-521L80-600l93-164 118 54q16-13 37-25t40-18l20-127h184l20 126q19 7 40.5 18.5T669-710l118-54 93 164-108 77q2 10 2.5 21.5t.5 21.5q0 10-.5 21t-2.5 21l108 78-93 164-118-54q-16 13-36.5 25.5T592-206L572-80H388Zm92-270q54 0 92-38t38-92q0-54-38-92t-92-38q-54 0-92 38t-38 92q0 54 38 92t92 38Zm0-60q-29 0-49.5-20.5T410-480q0-29 20.5-49.5T480-550q29 0 49.5 20.5T550-480q0 29-20.5 49.5T480-410Zm0-70Zm-44 340h88l14-112q33-8 62.5-25t53.5-41l106 46 40-72-94-69q4-17 6.5-33.5T715-480q0-17-2-33.5t-7-33.5l94-69-40-72-106 46q-23-26-52-43.5T538-708l-14-112h-88l-14 112q-34 7-63.5 24T306-642l-106-46-40 72 94 69q-4 17-6.5 33.5T245-480q0 17 2.5 33.5T254-413l-94 69 40 72 106-46q24 24 53.5 41t62.5 25l14 112Z" />
+                        </svg>
+                        <span class="ldbwebfhwebf">Settings</span>
+                    </button>
+                    <button class="rbtns" id="search" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="38" viewBox="0 -960 960 960" width="38">
+                            <path fill="white"
+                                d="M796-121 533-384q-30 26-69.959 40.5T378-329q-108.162 0-183.081-75Q120-479 120-585t75-181q75-75 181.5-75t181 75Q632-691 632-584.85 632-542 618-502q-14 40-42 75l264 262-44 44ZM377-389q81.25 0 138.125-57.5T572-585q0-81-56.875-138.5T377-781q-82.083 0-139.542 57.5Q180-666 180-585t57.458 138.5Q294.917-389 377-389Z" />
+                        </svg>
+
+                        <span class="ldbwebfhwebf">Search</span>
+                    </button>
+                    <button class="rbtns" id="LogOut" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="38" viewBox="0 -960 960 960" width="38">
+                            <path fill="white"
+                                d="M180-120q-24 0-42-18t-18-42v-600q0-24 18-42t42-18h299v60H180v600h299v60H180Zm486-185-43-43 102-102H360v-60h363L621-612l43-43 176 176-174 174Z" />
+                        </svg><span class="ldbwebfhwebf">LogOut</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="messages">
+        <div class="connectionsi">
+
+            <div class="con-holder">
+                <div class="tit-holder">
+                    <p id="title">Connections</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
+                        <path
+                            d="M180-12q-24 0-42-18t-18-42v-600q0-24 18-42t42-18h405l-60 60H180v600h600v-348l60-60v408q0 24-18 42t-42 18H180Zm300-360Zm182-352 43 42-285 284v86h85l286-286 42 42-285 286q-8 8-19.5 13t-23.5 5H390q-13 0-21.5-8.5T360-282v-115q0-12 5-23.5t13-19.5l284-284Zm171 168L662-724l100-100q17-17 42.5-17t42.5 18l84 85q17 18 17 42.5T930-654l-97 98Z" />
+                    </svg>
+
+
+                </div>
+                <div class="search" id="searchdiv">
+                    <input type="text" placeholder="Search" name="" id="searchinthe">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
+                        <path
+                            d="M796-121 533-384q-30 26-69.959 40.5T378-329q-108.162 0-183.081-75Q120-479 120-585t75-181q75-75 181.5-75t181 75Q632-691 632-584.85 632-542 618-502q-14 40-42 75l264 262-44 44ZM377-389q81.25 0 138.125-57.5T572-585q0-81-56.875-138.5T377-781q-82.083 0-139.542 57.5Q180-666 180-585t57.458 138.5Q294.917-389 377-389Z" />
+                    </svg>
+                </div>
+
+
+                <div class="e-con">
+                    <img src="{{ img }}" alt="">
+                    <div class="text-holder">
+                        <p id="username">Kousic <br><span>Hello How is it going</span></p>
+
+
+                    </div>
+                    <div class="tn">
+                        <div class="date">1m</div>
+                        <div class="number">1</div>
+                    </div>
+                </div>
+
+                <div class="e-con">
+                    <img src="{{ imgurl1 }}" alt="">
+                    <div class="text-holder">
+                        <p id="username">WinterMan <br><span>what?</span></p>
+
+
+                    </div>
+                    <div class="tn">
+                        <div class="date">2m</div>
+                        <div class="number">3</div>
+                    </div>
+                </div>
+
+                <div class="e-con">
+                    <img src="{{ imgurl2 }}" alt="">
+                    <div class="text-holder">
+                        <p id="username">Duck_Killer <br><span>Idk....</span></p>
+
+
+                    </div>
+                    <div class="tn">
+                        <div class="date">15m</div>
+                        <div class="number">2</div>
+                    </div>
+                </div>
+                <div class="e-con">
+                    <img src="{{ imgurl3 }}" alt="">
+                    <div class="text-holder">
+                        <p id="username">Drunk..SHiT <br><span>Branded Right???...</span></p>
+
+
+                    </div>
+                    <div class="tn">
+                        <div class="date">30m</div>
+                        <div class="number">4</div>
+                    </div>
+                </div>
+                <div class="e-con">
+                    <img src="{{ imgurl4 }}" alt="">
+                    <div class="text-holder">
+                        <p id="username">Asrith<br><span>Hello??</span></p>
+
+
+                    </div>
+                    <div class="tn">
+                        <div class="date">1H</div>
+                        <div style="display: none;" class="number">1</div>
+                    </div>
+                </div>
+                <div class="e-con">
+                    <img src="{{ imgurl8 }}" alt="">
+                    <div class="text-holder">
+                        <p id="username">vippyCream <br><span>will it work?</span></p>
+
+
+                    </div>
+                    <div class="tn">
+                        <div class="date">1H</div>
+                        <div style="display: none;" class="number">2</div>
+                    </div>
+                </div>
+                <div class="e-con">
+                    <img src="{{ imgurl6 }}" alt="">
+                    <div class="text-holder">
+                        <p id="username">Fuc#Ker <br><span>Damn dude..</span></p>
+
+
+                    </div>
+                    <div class="tn">
+                        <div class="date">2H</div>
+                        <div style="display: none;" class="number">2</div>
+                    </div>
+                </div>
+                <!-- <div class="e-con">
+                    <img src="{{ imgurl7 }}" alt="">
+                    <div class="text-holder">
+                        <p id="username">Kousic <br><span>Hi there.. How is going?</span></p>
+                        
+
+                    </div>
+                    <div class="tn">
+                        <div class="date">11 Aug</div>
+                        <div class="number">2</div>
+                    </div>
+                </div>
+                 -->
+
+            </div>
+        </div>
+        <div class="chat">
+            <!-- <div class="infop">
+                <svg id="calender" xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30">
+                    <path
+                        d="M180-80q-24 0-42-18t-18-42v-620q0-24 18-42t42-18h65v-60h65v60h340v-60h65v60h65q24 0 42 18t18 42v620q0 24-18 42t-42 18H180Zm0-60h600v-430H180v430Zm0-490h600v-130H180v130Zm0 0v-130 130Zm300 230q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                    <ellipse style="paint-order: fill; stroke: rgba(0, 0, 0, 0); fill: #EA1179;" cx="757.068" cy="-700"
+                        rx="150" ry="150" />
+                </svg>
+                <svg id="notifications" xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30">
+                    <path
+                        d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                    <ellipse style="paint-order: fill; stroke: rgba(0, 0, 0, 0); fill: #EA1179;" cx="757.068" cy="-700"
+                        rx="150" ry="150" />
+                </svg>
+                <img src="{{ img }}" alt="">
+                <svg id="dropdown" xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="M480-345 240-585l43-43 197 198 197-197 43 43-240 239Z"/></svg>
+            </div> -->
+            <div class="chat-box">
+                <div class="wchat">
+                    <div class="imgw">
+                        <img src="{{img}}" alt="">
+                        <p id="wuname">Kousic
+                            <!-- <span>🟢</span> -->
+                        </p>
+
+                    </div>
+                    <!-- <div class="iconsw">
+                        
+                    </div> -->
+                </div>
+                <div class="chat-msg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="303.71" height="300.67" viewBox="0 0 703.71 700.67"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path
+                            d="m367.05,237.82c-7.55,3.86-16.37,3.62-24.62,4.11s-16.18,1.52-22.16,7.12c-6.18,5.79-7.44,14.49-5.89,22.48,1.73,8.98,6.67,16.49,12.52,23.34,6.29,7.37,13.47,14.19,18.06,22.83,4.06,7.64,5.38,16.36,4.23,24.91-2.37,17.71-13.93,33.33-28.59,43.03-16.88,11.18-36.95,16.01-56.54,19.99-2.49.51-4.98,1-7.47,1.49-1.58.31-.91,2.72.66,2.41,19.74-3.88,39.95-7.94,57.8-17.65,8.21-4.46,15.76-10.11,21.83-17.25,5.68-6.68,10.16-14.43,12.78-22.82s3.22-16.82,1.31-25.11c-2.1-9.13-7.51-16.74-13.56-23.7s-13.19-13.78-17.34-22.33c-3.55-7.3-5.61-16.71-2.02-24.39,3.6-7.7,11.58-10.59,19.51-11.46,8.33-.91,16.92-.32,25.06-2.62,1.96-.55,3.87-1.3,5.68-2.23,1.43-.73.17-2.89-1.26-2.16h0Z"
+                            fill="#6c63ff" />
+                        <path
+                            d="m0,699.48c0,.66.53,1.19,1.19,1.19h258.84c.66,0,1.19-.53,1.19-1.19s-.53-1.19-1.19-1.19H1.19c-.66,0-1.19.53-1.19,1.19Z"
+                            fill="#3f3d58" />
+                        <path
+                            d="m442.49,699.48c0,.66.53,1.19,1.19,1.19h258.84c.66,0,1.19-.53,1.19-1.19s-.53-1.19-1.19-1.19h-258.84c-.66,0-1.19.53-1.19,1.19Z"
+                            fill="#3f3d58" />
+                        <polygon points="365.84 244.42 471.58 81.81 365.84 0 260.09 81.81 365.84 244.42"
+                            fill="#6c63ff" />
+                        <rect x="365.33" y="0" width="1" height="244.42" fill="#2f2e43" />
+                        <path
+                            d="m260.3,82.26l-.42-.91c.27-.12,27.21-12.57,66.6-18.75,36.36-5.7,91.1-7.07,145.32,18.75l-.43.9c-53.98-25.71-108.49-24.34-144.71-18.67-39.26,6.15-66.1,18.54-66.36,18.67Z"
+                            fill="#2f2e43" />
+                        <polygon points="198.72 447.94 215.87 447.47 207.93 425.39 194.01 430.39 198.72 447.94"
+                            fill="#faafb2" />
+                        <circle cx="202.74" cy="416.9" r="16.25" fill="#faafb2" />
+                        <g>
+                            <rect x="187.14" y="670.49" width="12.73" height="18.06"
+                                transform="translate(387.02 1359.03) rotate(-180)" fill="#faafb2" />
+                            <path
+                                d="m198.46,698.89c-2.18.2-13.07,1.06-13.61-1.44-.5-2.29.23-4.69.34-5.01,1.05-10.42,1.44-10.53,1.67-10.6.37-.11,1.45.4,3.21,1.54l.11.07.02.13c.03.16.81,3.99,4.5,3.4,2.53-.4,3.35-.96,3.61-1.23-.22-.1-.48-.27-.67-.56-.27-.42-.32-.97-.14-1.63.48-1.73,1.9-4.29,1.96-4.4l.16-.29,14.47,9.76,8.93,2.55c.67.19,1.22.67,1.49,1.32h0c.38.9.14,1.95-.58,2.6-1.62,1.46-4.85,3.95-8.23,4.27-.9.08-2.09.12-3.43.12-5.59,0-13.74-.58-13.8-.59Z"
+                                fill="#2f2e43" />
+                        </g>
+                        <g>
+                            <rect x="135" y="666.59" width="12.73" height="18.06"
+                                transform="translate(147.45 1365.84) rotate(-168.69)" fill="#faafb2" />
+                            <path
+                                d="m142.42,695.59c-2.17-.23-13.02-1.53-13.07-4.08-.04-2.35,1.15-4.55,1.32-4.85,3.07-10.01,3.47-10.05,3.72-10.07.39-.03,1.35.68,2.85,2.14l.09.09v.13c0,.17.01,4.07,3.74,4.22,2.56.1,3.47-.28,3.78-.5-.19-.14-.42-.36-.55-.68-.19-.47-.13-1.02.18-1.63.81-1.6,2.7-3.83,2.78-3.93l.21-.25,12.27,12.41,8.26,4.26c.62.32,1.06.9,1.2,1.59h0c.19.96-.24,1.94-1.08,2.44-1.88,1.11-5.53,2.93-8.91,2.57-.9-.1-2.07-.3-3.38-.56-5.48-1.1-13.36-3.26-13.42-3.28Z"
+                                fill="#2f2e43" />
+                        </g>
+                        <polygon
+                            points="220.37 524.94 159.74 518.48 131.84 668.86 151.25 671.28 183.99 572.24 182.37 674.11 203.39 674.11 220.37 524.94"
+                            fill="#2f2e43" />
+                        <path
+                            d="m217.13,438.47l-33.14-3.68-32.74,105.91s16.57-3.23,26.68,7.28c10.11,10.51,44.91-1.43,44.91-1.43l-5.71-108.09Z"
+                            fill="#dfdfe0" />
+                        <path id="uuid-55fa1ace-1880-4e3c-ae22-5abe9602db63-125"
+                            d="m248.32,550.05c.9,4.44-.75,8.5-3.69,9.06-2.94.56-6.05-2.58-6.95-7.03-.39-1.77-.32-3.61.18-5.35l-3.57-18.87,9.23-1.46,2.54,18.76c1.15,1.43,1.92,3.11,2.25,4.89,0,0,0,0,0,0Z"
+                            fill="#faafb2" />
+                        <path
+                            d="m204.41,437.22l12.72,1.25c6.13,1.3,10.9,6.11,12.16,12.25l18.5,89.97h-12.51s-30.88-103.48-30.88-103.48Z"
+                            fill="#dfdfe0" />
+                        <path
+                            d="m193.65,427.02l1.6-.73c-.67-3.02-1.28-6.42.42-9,.94-1.42,2.54-2.54,2.74-4.23.17-1.4-.72-2.83-.33-4.19.41-1.43,2.01-2.09,3.42-2.57,2.21-.74,4.46-1.49,6.78-1.55,2.33-.05,4.79.7,6.27,2.49.46.55.81,1.19,1.15,1.81,1.17,2.12,3.19,6.22,3.19,6.22,0,0-.08-.94-.07-2.81.59-1.64,1.43-3.23,1.57-4.96.17-2.09-.7-4.14-1.88-5.87-2.68-3.93-7.19-6.66-11.95-6.87-4.76-.22-9.12.11-11.53,4.22-.45.77-.82,1.6-1.39,2.29-1.05,1.28-2.64,1.96-3.93,2.99-2.87,2.3-4.89,6.53-4.69,10.21.2,3.68,1.55,7.18,2.89,10.61,1.15,2.96,3.52,5.97,6.52,7.01-.32-1.59-.63-3.18-.95-4.77"
+                            fill="#2f2e43" />
+                        <g>
+                            <path
+                                d="m204.03,439.15l-.19.26-5.78,7.9-6.67,9.13-1.5,2.05-5.5,7.53s-1.76,2.09-4.66,4.71l-.06.05c-1.04.94-2.22,1.94-3.52,2.94-7.35,5.66-18.41,11.19-28.01,3.76-12.19-9.44,14.55-30.48,28.16-40.08,4.47-3.16,10.17-4.01,15.37-2.31l12.36,4.06Z"
+                                fill="#dfdfe0" />
+                            <path
+                                d="m203.72,450.25c-1.23.82-2.62,1.37-4.08,1.64-.33.06-.66.11-1,.14l-6.92,5.11-1.83,1.35-6.48,4.79-5.39-7.64,9.95-6.57,6.08-4.02c.91-1.57,2.18-2.9,3.72-3.85,1.88-1.21,3.92-1.81,5.69-1.81h.01c.13,0,.25,0,.37.02,1.65.07,3.04.7,3.81,1.88,1.65,2.5-.12,6.51-3.93,8.96Z"
+                                fill="#faafb2" />
+                            <polygon points="192.91 459.7 187.83 448.74 165.32 457.14 176.15 473.72 192.91 459.7"
+                                fill="#dfdfe0" />
+                        </g>
+                        <path
+                            d="m205.73,473.83l-4.31-19.51c-2.11-9.55,3.3-18.99,12.59-21.94,59.96-19.09,85.59-51.21,95.53-68.66,32.19-56.51,55.6-118.85,55.83-119.47l.94.35c-.23.62-23.66,63.04-55.9,119.62-23.33,40.95-70.22,60.88-96.1,69.12-8.79,2.8-13.91,11.73-11.91,20.77l4.31,19.51-.98.21Z"
+                            fill="#2f2e43" />
+                        <path
+                            d="m203.72,450.25c-1.23.82-2.62,1.37-4.08,1.64-.98-1.33-1.55-2.9-1.58-4.58v-.12c0-3.36,2.18-6.28,5.4-7.8h.01c.18-.09-.19.07,0,0l.37.02c1.65.07,3.04.7,3.81,1.88,1.65,2.5-.12,6.51-3.93,8.96Z"
+                            fill="#faafb2" />
+                        <path
+                            d="m591.63,400.56s-12.5-3.03-20.07,15.27c-6.31,15.25-10.78,23.4-5.66,28.94,1.83,1.98,4.44,3.05,7.14,3.14l28.82.94s10.58-27.74,4.15-37.77c-6.43-10.03-14.37-10.52-14.37-10.52Z"
+                            fill="#2f2e43" />
+                        <polygon points="597.6 446.56 583.74 451.11 583.74 431.16 596.31 431.16 597.6 446.56"
+                            fill="#faafb2" />
+                        <polygon points="586.96 688.33 573.98 688.33 566.45 618.96 586.52 618.96 586.96 688.33"
+                            fill="#faafb2" />
+                        <path
+                            d="m561.34,699.48c-1.37,0-2.58-.03-3.5-.12-3.45-.32-6.74-2.86-8.39-4.35-.74-.67-.98-1.73-.59-2.65h0c.28-.66.83-1.15,1.52-1.35l9.11-2.6,14.75-9.95.16.3c.06.11,1.51,2.72,2,4.48.18.67.14,1.23-.14,1.66-.19.3-.46.47-.68.57.27.28,1.1.85,3.68,1.26,3.77.6,4.55-3.3,4.59-3.47l.02-.13.11-.07c1.79-1.15,2.89-1.68,3.27-1.57.24.07.64.19,1.7,10.81.11.33.86,2.78.35,5.11-.56,2.54-11.66,1.67-13.88,1.47-.06,0-8.38.6-14.08.6Z"
+                            fill="#2f2e43" />
+                        <polygon points="616.29 688.33 603.31 688.33 595.78 618.96 615.85 618.96 616.29 688.33"
+                            fill="#faafb2" />
+                        <path
+                            d="m590.67,699.48c-1.37,0-2.58-.03-3.5-.12-3.45-.32-6.74-2.86-8.39-4.35-.74-.67-.98-1.73-.59-2.65h0c.28-.66.83-1.15,1.52-1.35l9.11-2.6,14.75-9.95.16.3c.06.11,1.51,2.72,2,4.48.18.67.14,1.23-.14,1.66-.19.3-.46.47-.68.57.27.28,1.1.85,3.68,1.26,3.77.6,4.55-3.3,4.59-3.47l.02-.13.11-.07c1.79-1.15,2.9-1.68,3.27-1.57.24.07.64.19,1.7,10.81.11.33.86,2.78.35,5.11-.55,2.54-11.66,1.67-13.88,1.47-.06,0-8.38.6-14.08.6Z"
+                            fill="#2f2e43" />
+                        <polygon points="620.03 517.95 556.95 517.95 579.62 443.32 604.77 443.32 620.03 517.95"
+                            fill="#dfdfe0" />
+                        <g>
+                            <path id="uuid-fd4f2c97-fb62-4a05-8832-5ff88c74de66-126"
+                                d="m555.23,559.82c-.75,4.57-3.8,7.85-6.81,7.32-3.01-.53-4.84-4.66-4.09-9.23.27-1.83,1-3.56,2.11-5.05l3.44-19.32,9.35,1.96-4.38,18.84c.58,1.78.71,3.66.38,5.49,0,0,0,0,0,0Z"
+                                fill="#faafb2" />
+                            <path
+                                d="m583.59,443.34s-15.67-.41-17.32,3.71c-1.65,4.12-21.03,102.25-21.03,102.25h12.78l25.56-105.96Z"
+                                fill="#dfdfe0" />
+                        </g>
+                        <circle cx="586.92" cy="422.06" r="13.81" fill="#faafb2" />
+                        <path d="m589.09,405.12s-17.73,26.38-14.75,42.83l-10.31-6.46s7.26-33.31,18.09-35.9l6.98-.48Z"
+                            fill="#2f2e43" />
+                        <path
+                            d="m606.92,517.95h-41.4l-22.65,92.96c-.42,3.93,2.07,7.59,5.89,8.61,12.43,3.33,42.25,8.04,87.38-5.09,4.34-1.26,6.81-5.85,5.44-10.16l-34.66-86.32Z"
+                            fill="#2f2e43" />
+                        <g>
+                            <path
+                                d="m590.18,443.32l12.88-.57c5.58.42,10.62,3.46,13.61,8.18,9.1,14.38,26.12,44.7,10.92,48.85-20.03,5.47-29.74-24.99-29.74-24.99l-7.67-31.48Z"
+                                fill="#dfdfe0" />
+                            <path id="uuid-5f0663b3-514b-4d25-bf17-95b52eadc03c-127"
+                                d="m585.76,452.36c-2.65-3.8-2.74-8.28-.21-10,2.53-1.72,6.72-.03,9.36,3.78,1.08,1.5,1.77,3.25,2,5.09l11,16.26-8.07,5.11-9.98-16.57c-1.66-.88-3.06-2.14-4.09-3.67,0,0,0,0,0,0Z"
+                                fill="#faafb2" />
+                            <polygon points="592.27 465.51 601.36 457.14 619.33 473.87 602.62 485.29 592.27 465.51"
+                                fill="#dfdfe0" />
+                        </g>
+
+                    </svg>
+                    <p>Nothing here. Start a Conversation..</p>
+                </div>
+                <div class="inputs1">
+                    <div class="extras">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
+                            <path
+                                d="M120-160v-640l664 280h-59q-24 0-45.5 1t-37.5 4L180-710v168l242 62-242 60v167l282-118q-8 17-13.5 39.5T441-295L120-160Zm570 80q-78 0-134-55.5T500-269q0-79 56-135t134-56q78 0 134 56t56 135q0 78-56 133.5T690-80Zm70-86 29-31-82-82v-120h-41v139l94 94ZM180-371v-339 457-118Z" />
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
+                            <path
+                                d="m480-121-41-37q-105.768-97.121-174.884-167.561Q195-396 154-451.5T96.5-552Q80-597 80-643q0-90.155 60.5-150.577Q201-854 290-854q57 0 105.5 27t84.5 78q42-54 89-79.5T670-854q89 0 149.5 60.423Q880-733.155 880-643q0 46-16.5 91T806-451.5Q765-396 695.884-325.561 626.768-255.121 521-158l-41 37Zm0-79q101.236-92.995 166.618-159.498Q712-426 750.5-476t54-89.135q15.5-39.136 15.5-77.72Q820-709 778-751.5T670.225-794q-51.524 0-95.375 31.5Q531-731 504-674h-49q-26-56-69.85-88-43.851-32-95.375-32Q224-794 182-751.5t-42 108.816Q140-604 155.5-564.5t54 90Q248-424 314-358t166 158Zm0-297Z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
+                            <path
+                                d="M261-120q-24.75 0-42.375-17.625T201-180v-570h-41v-60h188v-30h264v30h188v60h-41v570q0 24-18 42t-42 18H261Zm438-630H261v570h438v-570ZM367-266h60v-399h-60v399Zm166 0h60v-399h-60v399ZM261-750v570-570Z" />
+                        </svg>
+
+                    </div>
+                    <div class="msgin">
+                        <input type="text" placeholder="Start a Conversation.." name="" id="">
+                        <button type="button"><svg fill="#252B48" xmlns="http://www.w3.org/2000/svg" height="48"
+                                viewBox="0 -960 960 960" width="48">
+                                <path d="M109-151v-253l314-78-314-81v-250l783 331-783 331Z" />
+                            </svg></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="suggestions">
+        <div class="hol-sug">
+            <div class="infop">
+                <svg id="calender" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25">
+                    <path
+                        d="M180-80q-24 0-42-18t-18-42v-620q0-24 18-42t42-18h65v-60h65v60h340v-60h65v60h65q24 0 42 18t18 42v620q0 24-18 42t-42 18H180Zm0-60h600v-430H180v430Zm0-490h600v-130H180v130Zm0 0v-130 130Zm300 230q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                    <ellipse style="paint-order: fill; stroke: rgba(0, 0, 0, 0); fill: #EA1179;" cx="757.068" cy="-700"
+                        rx="150" ry="150" />
+                </svg>
+                <svg id="notifications" xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960"
+                    width="25">
+                    <path
+                        d="M160-200v-60h80v-304q0-84 49.5-150.5T420-798v-22q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v22q81 17 130.5 83.5T720-564v304h80v60H160Zm320-302Zm0 422q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM300-260h360v-304q0-75-52.5-127.5T480-744q-75 0-127.5 52.5T300-564v304Z" />
+                    <ellipse style="paint-order: fill; stroke: rgba(0, 0, 0, 0); fill: #EA1179;" cx="757.068" cy="-700"
+                        rx="150" ry="150" />
+                </svg>
+                <img src="{{ img }}" alt="">
+                <svg id="dropdown" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
+                    <path d="M480-345 240-585l43-43 197 198 197-197 43 43-240 239Z" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    const searchcont = document.querySelector('#searchdiv')
+    const inputElement = document.querySelector('#searchinthe'); // Replace 'yourInputId' with the actual ID of your input element
+
+    // Adding a focus event listener
+    inputElement.addEventListener('focus', () => {
+        // This code will be executed when the input element gains focus
+        searchcont.style.height = "40px";
+        searchcont.style.borderRadius = "40px";
+        inputElement.style.width = "80%";
+        inputElement.style.paddingLeft = "40px";
+        inputElement.style.fontSize = "20px";
+
+
+
+        console.log("hiii")
+
+        // Add more actions or code here
+    });
+    inputElement.addEventListener('blur', () => {
+        searchcont.style.height = "20px";
+        searchcont.style.borderRadius = "20px";
+        inputElement.style.width = "90%";
+        inputElement.style.paddingLeft = "10px";
+        inputElement.style.fontSize = "15px";
+
+
+
+    });
+
+
+
+
+
+
+
+
+    const LogOut = document.getElementById('LogOut');
+    const search = document.getElementById('search');
+    const settings = document.getElementById('settings');
+    const Hub = document.getElementById('Hub');
+    const Dunks = document.getElementById('Dunks');
+    const Home = document.getElementById('Home');
+    const Connections = document.getElementById('Connections');
+    const Messages = document.getElementById('Messages');
+
+
+
+
+
+
+    // tippy(LogOut, {
+    //     content: 'Log Out',
+    //     theme: 'tooltip',
+    //     placement: 'right'
+    // });
+    // tippy(search, {
+    //     content: 'Search',
+    //     theme: 'tooltip',
+    //     placement: 'right'
+    // });
+
+    // tippy(settings, {
+    //     content: 'Settings',
+    //     theme: 'tooltip',
+    //     placement: 'right'
+    // });
+    // tippy(Dunks, {
+    //     content: 'Dunks',
+    //     theme: 'tooltip',
+    //     placement: 'right'
+    // });
+    // tippy(Hub, {
+    //     content: 'Hub',
+    //     theme: 'tooltip',
+    //     placement: 'right'
+    // });
+
+    // tippy(Connections, {
+    //     content: 'Connections',
+    //     theme: 'tooltip',
+    //     placement: 'right'
+    // });
+    // tippy(Messages, {
+    //     content: 'Messages',
+    //     theme: 'tooltip',
+    //     placement: 'right'
+    // });
+
+    // tippy(Home, {
+    //     content: 'Home',
+    //     theme: 'tooltip',
+    //     placement: 'right'
+    // });
+
+
+    const tooltips = [
+        { target: LogOut, content: 'Log Out' },
+        { target: search, content: 'Search' },
+        { target: settings, content: 'Settings' },
+        { target: Messages, content: 'Messages' },
+        { target: Connections, content: 'Connections' },
+        { target: Hub, content: 'Hub' },
+        { target: Dunks, content: 'Dunks' },
+        { target: Home, content: 'Home' },
+
+
+
+
+
+
+
+        // Add more tooltips here
+    ];
+
+    // Initialize tooltips
+
+    // function tooltipsjs(p) {
+    //     if (p === 1) {
+    //         tooltips.forEach(({ target, content }) => {
+    //             tippy(target, {
+    //                 content: content,
+
+    //                 placement: 'right'
+    //             });
+    //         });
+    //     } else {
+
+    //         tooltips.forEach(({ target, content }) => {
+    //             tippy(target, {
+    //                 content: content,
+
+    //                 placement: 'right'
+    //             }).disable();
+    //         });
+
+
+    //     }
+    // }
+
+    // tooltipsjs(1)
+
+
+
+
+    function initializeTooltips() {
+        tooltips.forEach(({ target, content }) => {
+            tippy(target, {
+                content: content,
+                placement: 'right'
+            });
+        });
+    }
+
+    initializeTooltips();
+
+
+
+    const toggleButton = document.getElementById('toggleButton');
+    const ih = document.querySelector('.ih');
+    const sidebar = document.getElementById('icon-holder');
+    const spanss = document.querySelectorAll('.ldbwebfhwebf');
+    const rbtns = document.querySelectorAll('.rbtns');
+    let tooltipsEnabled = true;
+
+    toggleButton.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+
+
+        if (sidebar.classList.contains('active')) {
+            console.log(tooltips);
+
+            toggleButton.style.marginTop = "5%";
+            toggleButton.style.marginBottom = "5%";
+            toggleButton.style.transform = "rotate(180deg)";
+            ih.style.width = "90%";
+
+            // Delayed modifications using setTimeout
+            setTimeout(() => {
+                rbtns.forEach(btn => {
+                    btn.style.justifyContent = "flex-start";
+                });
+
+                spanss.forEach(span => {
+                    span.style.display = "block";
+                });
+
+                // Disable tooltips when sidebar is active
+                if (tooltipsEnabled) {
+                    tooltips.forEach(({ target }) => {
+                        target._tippy.disable();
+                    });
+                    tooltipsEnabled = false;
+                }
+            }, 300);
+
+
+
+
+        } else {
+
+            ih.style.width = "60%";
+            toggleButton.style.marginTop = "-10%";
+            toggleButton.style.marginBottom = "-10%";
+            toggleButton.style.transform = "rotate(0deg)";
+
+            // Loop through each element in the NodeList and set display to "none"
+            spanss.forEach(span => {
+                span.style.display = "none";
+            });
+
+            // Enable tooltips when sidebar is not active
+            if (!tooltipsEnabled) {
+                tooltips.forEach(({ target }) => {
+                    target._tippy.enable();
+                });
+                tooltipsEnabled = true;
+            }
+
+
+        }
+    });
+
+
+
+</script>
+
+
+
+{% endblock %}

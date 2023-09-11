@@ -1,0 +1,525 @@
+$homebg: rgba(0, 0, 0, 0.644444);
+$lw : 11px;
+
+$pink: #FA00FF;
+$amber :#FFC700;
+$green : #00FF0A;
+$logoblue : #0041BF;
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+/* your_styles.css */
+/* This style is applied when the GIF is playing */
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+
+body {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1353%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1354%26quot%3b)'%3e%3c/rect%3e%3cpath d='M1488 560L0 560 L0 403.78Q75.37 359.14%2c 120 434.51Q159.31 353.81%2c 240 393.12Q327 360.13%2c 360 447.13Q414.76 381.89%2c 480 436.66Q522.72 359.38%2c 600 402.11Q672.13 354.24%2c 720 426.36Q789.79 376.15%2c 840 445.94Q856.51 390.46%2c 912 406.97Q981.75 356.73%2c 1032 426.48Q1051.46 373.95%2c 1104 393.41Q1146.52 363.93%2c 1176 406.45Q1249.93 360.38%2c 1296 434.31Q1335.74 354.05%2c 1416 393.79Q1457.89 363.69%2c 1488 405.58z' fill='%23182f5d'%3e%3c/path%3e%3cpath d='M1464 560L0 560 L0 458.48Q42.2 428.69%2c 72 470.89Q137.18 416.07%2c 192 481.25Q233.59 450.84%2c 264 492.43Q282.19 438.63%2c 336 456.82Q377.73 426.55%2c 408 468.28Q427.44 415.72%2c 480 435.16Q563.44 398.6%2c 600 482.04Q627.33 437.37%2c 672 464.69Q719.1 391.78%2c 792 438.88Q857.07 383.95%2c 912 449.03Q984.53 401.56%2c 1032 474.1Q1084.75 406.85%2c 1152 459.6Q1201.8 437.4%2c 1224 487.2Q1276.1 419.29%2c 1344 471.39Q1387.73 395.12%2c 1464 438.85z' fill='%2325467d'%3e%3c/path%3e%3cpath d='M1464 560L0 560 L0 520.02Q41.52 489.54%2c 72 531.06Q110.61 449.66%2c 192 488.27Q267.57 443.84%2c 312 519.42Q326.51 461.93%2c 384 476.44Q451.21 423.65%2c 504 490.86Q582.86 449.72%2c 624 528.57Q650.96 483.53%2c 696 510.48Q744.19 438.68%2c 816 486.87Q899.79 450.67%2c 936 534.46Q954.38 480.85%2c 1008 499.23Q1055.48 474.71%2c 1080 522.19Q1117.3 439.49%2c 1200 476.79Q1271.38 428.17%2c 1320 499.54Q1372.58 480.12%2c 1392 532.69Q1417.65 486.35%2c 1464 512z' fill='%23356cb1'%3e%3c/path%3e%3cpath d='M1464 560L0 560 L0 554.99Q17.65 500.64%2c 72 518.3Q141.97 468.27%2c 192 538.24Q244.8 519.04%2c 264 571.84Q316.4 504.25%2c 384 556.65Q433.7 486.35%2c 504 536.05Q558.88 470.93%2c 624 525.82Q685.13 514.96%2c 696 576.09Q722.72 530.81%2c 768 557.52Q818.84 488.36%2c 888 539.19Q962.85 494.04%2c 1008 568.88Q1020.94 509.82%2c 1080 522.75Q1155.72 478.48%2c 1200 554.2Q1243.87 526.07%2c 1272 569.93Q1286.56 512.49%2c 1344 527.05Q1416.22 479.27%2c 1464 551.5z' fill='white'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1353'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15.28%25' y1='139.29%25' x2='84.72%25' y2='-39.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1354'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(106%2c 159%2c 226%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+
+    .sec-loading {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.794);
+
+        .one {
+            height: 80px;
+            width: 80px;
+            border: $lw solid white;
+            transform: rotate(45deg);
+            border-radius: 0 50% 50% 50%;
+            position: relative;
+            animation: move 0.5s linear infinite alternate-reverse;
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 55%;
+                width: 55%;
+                border-radius: 50%;
+                border: $lw solid transparent;
+                border-top-color: white;
+                border-bottom-color: white;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                animation: rotate 1s linear infinite;
+            }
+        }
+
+        @keyframes rotate {
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes move {
+            to {
+                transform: translateY(50px) rotate(45deg);
+            }
+        }
+
+    }
+
+
+
+
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .grid-item {
+        background-color: rgba(0, 0, 0, 0.644444);
+        height: 100vh;
+        width: 50vw;
+    }
+
+    .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .left-c {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            #OMG {
+
+                &:hover {
+                    &::before {
+                        content: "Private Chat";
+                        font-size: 30px;
+                        width: 390px;
+
+
+                    }
+                }
+
+
+                &::before {
+                    content: "dm";
+                    font-size: 30px;
+
+                }
+            }
+
+            .cbutt {
+                background-color: $pink;
+                color: black;
+                border-radius: 100px;
+                width: 390px;
+                font-size: 39px;
+                text-decoration: none;
+                text-align: center;
+                padding: 8px;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                font-family: "Belanosima", sans-serif;
+                margin-bottom: 5vh;
+                font-weight: bold;
+                border: 3px solid black;
+                transition: all 0.5s ease;
+                cursor: pointer;
+                box-shadow: 35px 35px 50px rgba(0, 0, 0, 0.631372549);
+
+                &:hover {
+                    width: 400px;
+                    font-size: 45px;
+                }
+
+
+            }
+
+            .button {
+                /* background-color: rgba(21, 65, 255, 0.0392156863);*/
+                background-color: $logoblue;
+                color: white;
+                text-decoration: none;
+                border-radius: 4px;
+                text-align: center;
+                width: 350px;
+                padding: 8px;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                font-size: 30px;
+                border-radius: 100px;
+                font-family: "Belanosima", sans-serif;
+                margin-bottom: 5vh;
+                font-weight: bold;
+                border: 3px solid black;
+                transition: all 0.5s ease;
+                cursor: pointer;
+                box-shadow: 35px 35px 50px rgba(0, 0, 0, 0.631372549);
+
+
+                &:hover {
+                    // background-color: rgba(2, 13, 61, 0.6784313725);
+                    width: 390px;
+                    background-color: $green;
+                    color: black;
+
+
+
+                }
+
+
+
+
+            }
+        }
+    }
+
+    @media screen and (max-width: 990px) {
+        grid-template-columns: 1fr;
+
+        .grid-item {
+            background-color: rgba(0, 0, 0, 0.644444);
+            width: 100vw;
+        }
+
+        .left {
+            height: 30vh;
+        }
+
+        .right {
+            height: 70vh;
+        }
+    }
+}
+
+
+
+
+@font-face {
+    font-family: 'Dai Banna SIL';
+    src: url('../assets/fonts/DaiBannaSIL.ttf') format('truetype');
+
+}
+
+
+
+
+
+.public {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .public-l {
+        background-color: rgba(240, 248, 255, 0);
+        height: 100vh;
+        width: 70vw;
+
+
+
+
+        .chat-box {
+            background-color: rgb(58 59 44 / 79%);
+            width: 100%;
+            height: 100%;
+            padding: auto;
+
+            box-shadow: 35px 35px 50px rgba(0, 0, 0, 0.631372549);
+            overflow: scroll;
+
+
+            &::-webkit-scrollbar {
+                width: 0;
+
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: transparent;
+
+            }
+
+            .message {
+
+                border-radius: 50px;
+                height: fit-content;
+                padding: 15px;
+                margin-top: 10px;
+                width: fit-content;
+                max-width: 65vw;
+
+                font-family: 'Raleway', sans-serif;
+                font-weight: bold;
+                color: white;
+                word-wrap: break-word;
+
+
+                span {
+                    margin-right: 1vw;
+                    margin-left: 1vw;
+                }
+
+                .dtdiv {
+
+                    text-align: right;
+                    padding: 10px;
+                    font-family: 'Cabin', sans-serif;
+                    font-weight: 400;
+                    color: gray;
+                    border-bottom: 2px solid black;
+                    display: flex;
+                    justify-content: space-between;
+
+                    align-items: center;
+
+                    svg {
+
+                        padding: 7px;
+                        border-radius: 25px;
+                        transition: all ease 0.8s;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: #FA00FF;
+
+                        }
+                    }
+                }
+            }
+
+
+
+        }
+
+    }
+
+    .public-r {
+        background-color: $homebg;
+
+        height: 100vh;
+        width: 30vw;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        #OMG {
+
+            &:hover {
+                &::before {
+                    content: "Private Chat";
+                    font-size: 30px;
+                    width: 390px;
+
+
+                }
+            }
+
+
+            &::before {
+                content: "dm";
+                font-size: 30px;
+
+            }
+        }
+
+        .sendinfo {
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+
+        p {
+
+            color: white;
+            text-align: right;
+            font-family: 'Dai Banna SIL', serif;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            input {
+                padding: 10px;
+                padding-left: 30px;
+                width: 26vw;
+                height: 4.5vh;
+                border: 2px solid black;
+                font-size: 30px;
+                border-radius: 25px;
+                font-family: 'Ubuntu', sans-serif;
+                box-shadow: 35px 35px 50px rgba(0, 0, 0, 0.631372549);
+                transition: all 1s ease;
+
+
+                &:hover {
+                    width: 24vw;
+                    height: 5vh;
+
+
+                }
+
+                &:focus {
+                    width: 27vw;
+                    margin-right: 6vw;
+                    height: 6vh;
+
+
+                }
+            }
+
+            // p tag inside .sendinfo div
+            .sendinfo {
+                margin-top: 10px; // Optionally add margin-top for spacing between form and p
+            }
+        }
+
+
+        .left-c {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .cbutt {
+                background-color: $pink;
+                color: black;
+                border-radius: 100px;
+                width: 300px;
+                font-size: 30px;
+                text-decoration: none;
+                text-align: center;
+                padding: 8px;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                font-family: "Belanosima", sans-serif;
+                margin-bottom: 5vh;
+                font-weight: bold;
+                border: 3px solid white;
+                transition: all 0.5s ease;
+                cursor: pointer;
+                box-shadow: 35px 35px 50px rgba(0, 0, 0, 0.631372549);
+
+                &:hover {
+                    width: 310px;
+                    font-size: 36px;
+                }
+            }
+
+
+        }
+
+
+
+    }
+
+    @media screen and (max-width: 990px) {
+        overflow: hidden;
+        grid-template-columns: 1fr;
+
+        .public-l {
+
+            
+            width: 100vw;
+            height: 80vh;
+
+
+
+            .chat-box {
+
+                width: 100%;
+                height: 80vh;
+
+                background-color: rgb(58 59 44 / 79%);
+
+
+
+
+            }
+
+        }
+
+        .public-r {
+            background-color: $homebg;
+
+            height: 20vh;
+            width: 100%;
+           
+            
+
+
+                form {
+                  
+                   
+                   
+                   height: 20vh;
+                   justify-content: start;
+                   
+
+                    input {
+
+                        width: 90vw;
+                        padding: 20px;
+                        height: 5vh;
+                        border-radius: 50px;
+                        margin-top: 10px;
+                      
+                        
+                      &:hover {
+                        width: 90vw;
+                        height: 55px;
+
+    
+    
+                    }
+    
+                    &:focus {
+                        width: 90vw;
+                        margin-right: 0;
+                        height: 55px;
+    
+    
+                    
+                }
+
+                    }
+                    
+            }
+
+            .sendinfo {
+                display: none;
+            }
+
+            .none {
+                display: none;
+            }
+        }
+    }
+}

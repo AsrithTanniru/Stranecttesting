@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+/* Hide vertical scrollbar */
+.nc {
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.nc::-webkit-scrollbar {
+  display: none;
+  /* Hide webkit-based browsers (Chrome, Safari) */
+}
+
+/* For Firefox */
+.nc {
+  scrollbar-color: transparent transparent;
+  /* thumb color and track color */
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+.main-container .hh {
+  background-color: #FFC700;
+  height: 100vh;
+  width: 60vw;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: auto;
+  position: relative;
+}
+.main-container .hh h1 {
+  font-size: 100px;
+  font-weight: 900;
+  padding: 20px;
+  letter-spacing: 2px;
+  color: #272727;
+  font-family: "Crimson Text", serif;
+}
+.main-container .hh .animated-p {
+  padding-left: 40px;
+  padding-bottom: 40px;
+  letter-spacing: 2px;
+  color: black;
+  font-size: 20px;
+  animation-name: fontChange;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  height: 10px;
+}
+.main-container .hh .intropara {
+  font-family: "Cinzel", serif;
+  line-height: 35px;
+  font-size: 1.5vw;
+  padding-top: 80px;
+  font-weight: 1000;
+  padding-bottom: 60px;
+}
+.main-container .hh .scroll-icon {
+  position: absolute;
+  /* Set the scroll icon to absolute position */
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  /* Adjust z-index to keep it above the content */
+  width: 40px;
+  height: 40px;
+  background-color: #272727;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  animation: blinkAndDisappear 0.5s 20;
+}
+.main-container .hh .arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 7px 0 7px;
+  border-color: white transparent transparent transparent;
+}
+.main-container .hh .interests {
+  height: 60vh;
+  width: 50vw;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+.main-container .hh .interests .it {
+  flex: auto auto auto;
+  width: min-content;
+  height: fit-content;
+  background-color: #272727;
+  border-radius: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 10px;
+  margin: 6px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.448);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+.main-container .hh .interests .it:hover {
+  padding: 12px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.563);
+  font-weight: 900;
+}
+.main-container .hh .interests .p12 {
+  width: fit-content;
+  height: fit-content;
+  justify-content: left;
+  padding-left: 8px;
+}
+.main-container .hh .interests .p12 p {
+  font-size: 20px;
+  font-family: "Rubik", sans-serif;
+  text-align: left;
+  color: #d4d4d4;
+  padding: 0;
+}
+.main-container .hh .interests .svg {
+  width: fit-content;
+}
+.main-container .hh .interests .svg svg {
+  fill: #7d7d7d;
+}
+.main-container .btns {
+  background-color: #272727;
+}
+.main-container .btns .inner-btns {
+  margin: auto;
+  width: 35vw;
+  height: 90vh;
+  margin-top: 5vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.main-container .btns .inner-btns a {
+  text-decoration: none;
+}
+.main-container .btns .inner-btns p {
+  margin: 0;
+  font-size: 2vw;
+  font-family: "Cinzel", serif;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7294117647);
+}
+.main-container .btns .inner-btns .p1 {
+  text-align: left;
+  padding-left: 20px;
+}
+.main-container .btns .inner-btns .p2 {
+  text-align: center;
+}
+.main-container .btns .inner-btns .p3 {
+  text-align: right;
+  padding-right: 20px;
+}
+.main-container .btns .inner-btns button {
+  height: 10vh;
+  background-color: #FFC700;
+  border-radius: 50px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  font-size: 2vw;
+  border: none;
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+  color: #272727;
+  width: 100%;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.78);
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+.main-container .btns .inner-btns button:hover {
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.78);
+  height: 11vh;
+  font-size: 2.5vw;
+}
+.main-container .btns .inner-btns button:hover svg {
+  height: 5vw;
+  width: 5vw;
+}
+.main-container .btns .inner-btns button span {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.main-container .btns .inner-btns button span svg {
+  vertical-align: middle;
+  transition: all ease 0.3s;
+}
+@keyframes fontChange {
+  0% {
+    font-family: "Varela Round", sans-serif;
+  }
+  20% {
+    font-family: "Kaushan Script", cursive;
+  }
+  40% {
+    font-family: "Josefin Sans", sans-serif;
+  }
+  60% {
+    font-family: "Rubik", sans-serif;
+  }
+  80% {
+    font-family: "Euphoria Script", cursive;
+    font-weight: 900;
+  }
+  100% {
+    font-family: "Pacifico", cursive;
+  }
+}
+@keyframes blinkAndDisappear {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 990px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    width: 100vw;
+  }
+  .main-container .hh {
+    display: none;
+    overflow: hidden;
+  }
+  .main-container .btns {
+    background-color: #272727;
+    overflow: hidden;
+  }
+  .main-container .btns .inner-btns {
+    margin: auto;
+    width: 100vw;
+    height: 85vh;
+    background-color: rgba(0, 128, 0, 0);
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  .main-container .btns .inner-btns a {
+    text-decoration: none;
+    justify-self: center;
+  }
+  .main-container .btns .inner-btns p {
+    margin: 0;
+    font-size: 20px;
+    font-family: "Cinzel", serif;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7294117647);
+  }
+  .main-container .btns .inner-btns .p1 {
+    text-align: left;
+    padding-left: 20px;
+  }
+  .main-container .btns .inner-btns .p2 {
+    text-align: center;
+  }
+  .main-container .btns .inner-btns .p3 {
+    text-align: right;
+    padding-right: 20px;
+  }
+  .main-container .btns .inner-btns button {
+    height: 75px;
+    width: 95vw;
+    background-color: #FFC700;
+    border-radius: 50px;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    font-size: 30px;
+    border: none;
+    font-family: "Crimson Text", serif;
+    font-weight: 600;
+    color: #272727;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.78);
+    transition: all ease 0.3s;
+    cursor: pointer;
+  }
+  .main-container .btns .inner-btns button:hover {
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.78);
+    height: 75px;
+    font-size: 31px;
+  }
+  .main-container .btns .inner-btns button span {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=fhub.css.map */

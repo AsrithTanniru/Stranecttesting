@@ -1,0 +1,178 @@
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+.container {
+    height: 100vh;
+    overflow: hidden;
+
+    background-color: #1c1d22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .holder {
+        background-color: #e9e9e9;
+        height: 90%;
+        width: 80%;
+        border-radius: 50px;
+        display: flex;
+        padding: 10px;
+
+        .left {
+            width: 60%;
+            background-color: #e9e9e9;
+            border-radius: 50px;
+
+            .holder {
+                padding: 20px;
+                // background-color: #1c1d22;
+                height: fit-content;
+
+                h1 {
+                    p {
+                        font-family: 'Crimson Text', serif;
+                    }
+                }
+            }
+
+        }
+
+        .right {
+            width: 40%;
+            background-color: white;
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+            logo {
+                // background-color: firebrick;
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    text-align: center;
+                }
+            }
+
+            svg {
+                width: 200;
+                height: 200;
+                // background-color: wheat;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                // gap: 20px;
+                width: 90%;
+                margin-top: 50px;
+                align-items: center;
+
+                .wrap {
+                    width: 90%;
+                    border-bottom: 1px solid #1c1d22;
+                    // border-bottom: 1px solid red;
+
+                    margin-bottom: 35px;
+
+                }
+
+                input {
+                    width: 100%;
+                    height: 40px;
+                    // margin-bottom: 20px;
+                    border: none;
+                    outline: none;
+                    font-size: 20px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    transition: all 0.3s ease-in-out;
+                    cursor: pointer;
+
+                    &:hover {
+                        padding-left: 5px;
+                    }
+
+                    &:focus {
+                        padding-left: 20px;
+                    }
+
+                }
+
+                p {
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    color: rgb(124, 124, 124);
+                    text-decoration: underline;
+                    text-align: right;
+                    width: 90%;
+                    cursor: pointer;
+                }
+
+                button {
+                    cursor: pointer;
+                    margin-top: 30px;
+                    width: 70%;
+                    height: 55px;
+                    border-radius: 50px;
+                    border: none;
+                    background-color: #EA1179;
+                    box-shadow: 0px 0px 0px #EA1179;
+
+                    font-size: 25px;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    transition: all 0.2s ease-in;
+                   
+                    &:last-child {
+                        background-color: #1c1d22;
+                        color: white;
+                    }
+
+                    &:last-child:hover {
+                        box-shadow: 0px 0px 0px #EA1179;
+
+                    }
+
+                    &:hover {
+                        width: 71%;
+                        height: 57px;
+                        box-shadow: 0px 0px 100px #EA1179;
+
+                        // box-shadow: 0px 0px 100px #1c1d22;
+
+                    }
+                }
+                #password-error {
+                    color: black;
+                    font-family: cursive;
+                }
+            }
+
+            h6 {
+                margin-top: 50px;
+                font-weight: 200;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+                span {
+                    font-family: 'Lovers Quarrel', cursive;
+                    font-weight: 800;
+                    font-size: 20px;
+                }
+            }
+
+
+
+        }
+    }
+
+}

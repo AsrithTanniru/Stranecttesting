@@ -1,0 +1,48 @@
+{% extends './base/SignUpBase.html' %}
+{% block content %}
+<div class="S-Main-C">
+    <div class="S-Container">
+        <div class="S-Left">
+            <form method="POST">
+                <input name="UsernameAtLogin" type="text" value="{{username | safe}}" placeholder="Username">
+                <input name="PasswordAtLogin" type="password" placeholder="Password">
+                
+                <button>Sign In</button>
+
+            </form>
+            <div class="errors">
+                {{error | safe}}
+
+
+            </div>
+
+        </div>
+        <div class="S-Right">
+            <div class="S-Cont">
+                <div class="S-Svg">
+                    {{moon | safe}}
+                </div>
+
+                <div class="S-Btn-L">
+
+                   <button> <a href="../Hub/SignUp">Create Account</a></button>
+                   
+
+                    
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+<div class="floating-text">From Kousic</div>
+{% endblock %}

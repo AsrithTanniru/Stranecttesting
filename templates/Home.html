@@ -1,0 +1,37 @@
+{% extends './base/base.html' %}
+{% block content %}
+
+<section class="sec-loading" id="loading">
+    <div class="one">
+    </div>
+</section>
+<script type="text/javascript">
+    var loader = document.getElementById("loading");
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+                loader.style.display = 'none';
+            }, 2000);
+
+    });
+    
+</script>
+<div class="grid-container">
+    <!-- First child element -->
+    <div class="grid-item left">
+        {{ svg_data | safe }}
+            
+
+
+    </div>
+
+    <!-- Second child element -->
+    <div class="grid-item right">
+
+        <div class="left-c" ><a href="/Hub" id="OMG" class="button">?</a></div>
+       <!-- <div class="left-c"><a href="/Login" class="button">Login</a></div>-->
+        <div class="left-c"><a href="/Public" target="_blank" class=" cbutt">Mass Chat?</a></div>
+
+    </div>
+</div>
+
+{% endblock %}

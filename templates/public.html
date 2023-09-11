@@ -1,0 +1,177 @@
+{% extends './base/base.html' %}
+{% block content %}
+<div class="public">
+	<div class="public-l">
+		<div class="chat-box" id="chat-box">
+
+		</div>
+	</div>
+
+	<!-- Second child element -->
+	<div class="public-r">
+
+		<div class="form-container">
+			<form onsubmit="sendMessage(event)">
+				<input id="msginp" type="text" autocomplete="off"  placeholder="Press ' &#47 '     :)">
+				<input id="msginp1" type="submit" style="display: none;">
+
+
+
+
+			</form>
+			 <div class="sendinfo">
+				<p>Press Enter to send</p>
+			</div> 
+		</div>
+		 <div class="none">
+			<div class="left-c"><a href="/Hub" id="OMG" class="cbutt">?</a></div>
+			
+		</div>
+
+	</div>
+
+
+</div>
+<script type="text/javascript">
+	const viewportWidth = window.innerWidth;
+	const inputElement = document.getElementById('msginp');
+	if(viewportWidth > 990)
+	{
+		let originalPlaceholder = inputElement.getAttribute('placeholder');
+
+		inputElement.addEventListener('focus', function () {
+			inputElement.setAttribute('placeholder', 'Start typing...');
+		});
+
+		inputElement.addEventListener('blur', function () {
+			inputElement.setAttribute('placeholder', "Press ' / '");
+		});
+
+
+
+		document.addEventListener('keydown', function (event) {
+			if (event.keyCode === 191) { // 191 is the key code for "/"
+				event.preventDefault();
+				inputElement.focus();
+			}
+		});
+
+
+
+	}
+	else
+	{
+		inputElement.setAttribute('placeholder', 'Start typing...');
+	}
+	
+
+
+
+
+
+	///////////////////////////////////////////////
+
+
+
+	var socketio = io.connect();
+	
+
+
+	
+	const createMessage = (msg, datetime) => { 
+		var chatBox = document.getElementById('chat-box');
+		// Function to scroll to the end of the div
+function scrollToBottom() {
+            var div = document.getElementById("chatBox");
+            div.scrollTop = div.scrollHeight;
+        }
+	const content = `
+	<div class="message">
+    <span>➟</span>
+
+    ${msg}
+
+
+    <div class="dtdiv">
+        <div class="likesvgf">
+            <svg xmlns="http://www.w3.org/2000/svg" height=22 viewBox="0 -960 960 960" width=22>
+                <path
+                    d="M720-120H280v-520l280-280 50 50q7 7 11.5 19t4.5 23v14l-44 174h258q32 0 56 24t24 56v80q0 7-2 15t-4 15L794-168q-9 20-30 34t-44 14Zm-360-80h360l120-280v-80H480l54-220-174 174v406Zm0-406v406-406Zm-80-34v80H160v360h120v80H80v-520h200Z" />
+            </svg>
+
+
+        </div>
+        <span>${datetime}</span>
+    </div>
+
+
+</div>
+
+
+	`;
+	if(viewportWidth > 990)
+	{
+
+		chatBox.insertAdjacentHTML('afterbegin', content);
+		chatBox.scrollTop = 0;
+	}
+	else
+	{
+		chatBox.innerHTML += content;
+		
+        // Call the function to scroll to the end when the page loads
+		chatBox.scrollTo(0, chatBox.scrollHeight);
+	}
+	
+
+// Scroll to the top (newly added content at the bottom)
+
+
+
+	};
+
+
+	socketio.on("message", (data) => {
+		createMessage(data.message, data.datetime);
+		console.log(data.message, data.datetime, data.Img);
+	});
+
+	const sendMessage = (event) => {
+		event.preventDefault(); // Prevent form submission
+
+		const message = document.getElementById("msginp");
+		if (message.value === "") return;
+		socketio.emit("message", { data: message.value });
+		message.value = "";
+	};
+
+
+
+
+    // Add event listener for DOMContentLoaded to ensure the element is available
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch("/history")
+            .then((response) => response.json())
+            .then((data) => {
+                const { messages } = data;
+                messages.reverse().forEach((message) => {
+                    createMessage(message.message, message.datetime);
+                });
+            })
+            .catch((error) => console.error("Error loading chat history:", error));
+
+
+    });
+
+
+
+    
+
+
+
+
+
+
+
+</script>
+{% endblock %}

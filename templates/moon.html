@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-250px);
+    position: relative;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-list li {
+    padding: 10px 20px;
+}
+
+.sidebar-list li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    background-color: #333;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+  </style>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Social App</h3>
+            </div>
+            <ul class="sidebar-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+            <button id="toggleButton" class="toggle-button"><i class="fas fa-bars"></i></button>
+        </nav>
+        <main class="content">
+            <p>Content goes here.</p>
+        </main>
+    </div>
+    <script>
+      const toggleButton = document.getElementById('toggleButton');
+const sidebar = document.getElementById('sidebar');
+
+toggleButton.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+});
+
+    </script>
+</body>
+</html>

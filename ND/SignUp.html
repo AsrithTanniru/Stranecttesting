@@ -1,0 +1,111 @@
+{% extends './base/SignUpBase.html' %}    
+{% block title %}
+<title>Signup</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    /* Add this style to change cursor to "not-allowed" for disabled buttons */
+    .disabled-button {
+        cursor: not-allowed;
+    }
+    .pointer {
+        cursor:pointer;
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        var submitButton = $('#submit-button');
+        var availabilityDiv = $('#availability');
+
+        $('#usernameInput').on('input', function() {
+            var username = $(this).val();
+
+            // Check for white spaces
+            if (/\s/.test(username)) {
+                availabilityDiv.text('Username cannot contain white spaces.').show();
+                submitButton.prop('disabled', true).addClass('disabled-button pointer');
+                return;
+            }
+
+            if (username.length >= 4) {
+                $.ajax({
+                    url: '/check_username',
+                    data: {'username': username},
+                    success: function(data) {
+                        if (data.available) {
+                            availabilityDiv.hide();
+                            submitButton.prop('disabled', false).removeClass('disabled-button').addClass('pointer');
+                        } else {
+                            availabilityDiv.text('Username is not available.').show();
+                            submitButton.prop('disabled', true).removeClass('pointer').addClass('disabled-button');
+                        }
+                    }
+                });
+            } else {
+                availabilityDiv.hide();
+                submitButton.prop('disabled', true).removeClass('pointer').addClass('disabled-button');
+            }
+        });
+    });
+</script>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="S-Main-C">
+    <div class="S-Container">
+        <div class="S-Left">
+            <form method="POST" action="">
+                <div id="availability" style="display: none;"></div>
+                <input type="text" name="Username" id="usernameInput" placeholder="Username" value="{{ Username | safe }}">
+            
+                <input type="password" name="Password" placeholder="Password">
+                <input type="password" name="ConfrimPassword" placeholder="Re-type Password">
+                <button id="submit-button" disabled class="disabled-button">Create Account</button>
+
+            </form>
+            <div class="errors">
+                {{error | safe}}
+
+
+            </div>
+
+        </div>
+        <div class="S-Right">
+            <div class="S-Cont">
+                <div class="S-Svg">
+                    {{moon | safe}}
+                </div>
+
+                <div class="S-Btn">
+
+                   <button> <a href="../Hub/Login">Sign In</a></button>
+                   <button> <a href="../Hub/About">About Us</a></button>
+
+                    
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+</div>
+<div class="floating-text">From Kousic</div>
+    <script>
+        let element = document.querySelector(".S-Main-C");
+
+element.requestFullscreen();
+    </script>
+{% endblock %}
+
+
+
