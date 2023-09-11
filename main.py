@@ -76,13 +76,13 @@ def LogIn():
 
 @app.route("/SignUp", methods=["POST", "GET"])
 def SignUp():
-    username = request.args.get("nila")
-    password = request.args.get("lila")
-    error = "Please Re-type the password."
-    if username == None:
-        username = ""
-        password = ""
-        error = ""
+    username_g = request.args.get("nila")
+    password_g = request.args.get("lila")
+    error_g = "Please Re-type the password."
+    if username_g == None:
+        username_g = ""
+        password_g = ""
+        error_g = ""
 
     if request.method == "POST":
         username = request.form["Username"]
@@ -124,7 +124,7 @@ def SignUp():
             )
     # art_info = getArt()
 
-    return render_template("SignUp.html", username=username, password=password, error=error)
+    return render_template("SignUp.html", username=username_g, password=password_g, error=error_g)
 
 
 # Your route to handle the selected interests
@@ -215,7 +215,7 @@ def check_username():
 
             return jsonify({"available": True})
     else:
-        return jsonify({"available": False})
+        return jsonify({"available": False})  
 
 
 # ==============================From Here On The Real Magic Starts====================#Complicated shit#

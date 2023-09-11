@@ -61,8 +61,14 @@ def read_file(file_path):
 
 
 def validate_password(password):
-    pattern = r"^(?=.*[A-Za-z])(?=.*\ba)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+    pattern = r"^(?=.*[A-Za-z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
     return bool(re.match(pattern, password))
+
+# if validate_password("testytest2211A!@"):
+#     print(True)
+# else:
+#     print(False)
+
 
 
 with open("./server-json/user.json") as f1:
