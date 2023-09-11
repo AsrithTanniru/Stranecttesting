@@ -61,7 +61,7 @@ def read_file(file_path):
 
 
 def validate_password(password):
-    pattern = r"^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+    pattern = r"^(?=.*[A-Za-z])(?=.*\ba)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
     return bool(re.match(pattern, password))
 
 

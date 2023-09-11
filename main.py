@@ -122,7 +122,7 @@ def SignUp():
                 Username=username,
                 name="SignUp",
             )
-    art_info = getArt()
+    # art_info = getArt()
 
     return render_template("SignUp.html", username=username, password=password, error=error)
 
