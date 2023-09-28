@@ -3,16 +3,7 @@ from functools import wraps
 import datetime
 import os
 import pytz
-from flask import (
-    Flask,
-    abort,
-    jsonify,
-    redirect,
-    url_for,
-    render_template,
-    request,
-    session,
-)
+
 from flask_socketio import SocketIO
 import requests
 import jwt  # You need to have PyJWT library installed
@@ -23,7 +14,16 @@ import re
 from decryption.decrypt import *
 from argon2 import PasswordHasher
 import argon2.exceptions
-
+from flask import (
+    Flask,
+    abort,
+    jsonify,
+    redirect,
+    url_for,
+    render_template,
+    request,
+    session,
+)
 
 JWT_EXPIRATION_MINUTES = 1440
 

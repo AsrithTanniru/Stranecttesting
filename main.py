@@ -253,8 +253,8 @@ def Home():
     csid = session.get("sid")
     acc_status = session.get("new")
     uname = session.get("inpzero")
-    if acc_status == "true":
-        return render_template("interests-display.html", id=csid, Username=uname)
+    # if acc_status == "true":
+    #     return render_template("interests-display.html", id=csid, Username=uname)
 
     return render_template(
         "AfterLoginHome.html",
